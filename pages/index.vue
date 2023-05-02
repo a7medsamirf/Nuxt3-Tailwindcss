@@ -1,14 +1,22 @@
 <template>
+  <div>
+    <card />
+<hero />
+<service />
 
-    <Head>
-      <Title>Nuxt 3 Websocket</Title>
-    </Head>
-  
- <the-header />
+<testimonials />
+  </div>
+</template>
 
-  </template>
-  
-  <script setup lang="ts">
+<script>
+import Hero from '~/components/section/Hero.vue'
+export default {
+  components: { Hero },
+  data() {
+    name: ''
+    return {
 
-  </script>
-  
+    }
+  }
+}
+</script>
