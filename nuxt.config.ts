@@ -28,7 +28,27 @@ export default defineNuxtConfig({
   ],
 
   modules: ['@nuxtjs/tailwindcss'],
-  css: ['@/assets/css/tailwind.css'],
+
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        'date-fns'
+      ]
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/css/tailwind.css" as *;'
+        }
+      }
+    }
+  },
+
+
+
+
+
+
   build: {
     transpile: ["@heroicons/vue", "@headlessui/vue"],
   },

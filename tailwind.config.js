@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -11,14 +12,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        '3xl': '0 14px 22px -9px rgba(187,203,216,.47)',
+      },
       colors: {
         'bubble-gum': '#EF0178',
         'custom-color': '#5243C2',
+        'color-dark': '#1D1B1B',
+        'section-color': "#f2fbfc",
         "gray": {
           "50": "#f9fafb",
           "100": "#f3f4f6",
           "200": "#e5e7eb",
-          "300": "#d1d5db",
+          "300": "#f2fbfc",
           "400": "#9ca3af",
           "500": "#6b7280",
           "600": "#4b5563",
